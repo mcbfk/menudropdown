@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="m.css">
+    <script src="https://kit.fontawesome.com/b9cfc138ce.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  
+</head>
+
+<body>
+    
+    <nav>
+        <ul class="ul-principal">
+            <li class="li-p">
+                <a href="#">HOME<i class="fa-brands fa-studiovinari"></i></a>   
+            </li>
+            <li class="li-p">
+                <a   href="javascript://" class="bt1">NOTICIAS
+                    <i class="fa-solid fa-hat-wizard"></i>
+                </a>
+                <ul class="ul-noticias">
+                    <li><a href="">link1</a></li>
+                    <li><a href="">link2</a></li>
+                    <li><a href="">link3</a></li>
+                    <li><a href="">link4</a></li>
+                </ul>
+            </li>
+            <li class="li-p">
+                <a  href="javascript://" class="bt2">ETRETENIMENTO<i class="fa-brands fa-d-and-d"></i></a>
+                <ul class="ul-entret">
+                    <li><a href="">link1</a></li>
+                    <li><a href="">link2</a></li>
+                    <li><a href="">link3</a></li>
+                    <li><a href="">link4</a></li>
+                </ul>
+            </li>
+            <li class="li-p">
+                <a  href="javascript://" class="bt3">FALE CONOSCO<i class="fa-solid fa-cannabis"></i></a>
+                <ul class="ul-fale-c">
+                    <li><a href="">link1</a></li>
+                    <li><a href="">link2</a></li>
+                    <li><a href="">link3</a></li>
+                    <li><a href="">link4</a></li>
+                </ul>
+            </li>
+            <li class="li-p">
+                <a href="#">SOBRE<i class="fa-brands fa-sticker-mule"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        var btn1 = document.querySelector(".bt1")
+        var btn2 = document.querySelector(".bt2")
+        var btn3 = document.querySelector(".bt3")
+   
+
+btn1.addEventListener("click",
+    function(event) {
+        if (!event.target.matches('.bt1')) {
+            var dropdowns = document.getElementsByClassName("ul-noticias");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('active')) {
+                    openDropdown.classList.remove('active');
+                }
+            }
+        }
+        document.querySelector(".ul-noticias").classList.toggle("active");
+    }
+) 
+btn2.addEventListener("click",
+    function(event) {
+        if (!event.target.matches('.bt2')) {
+            var dropdowns = document.getElementsByClassName("ul-entret");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('active')) {
+                    openDropdown.classList.remove('active');
+                }
+            }
+        }
+        document.querySelector(".ul-entret").classList.toggle("active");
+    }
+) 
+btn3.addEventListener("click",
+    function(event) {
+        if (!event.target.matches('.bt3')) {
+            var dropdowns = document.getElementsByClassName("ul-fale-c");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('active')) {
+                    openDropdown.classList.remove('active');
+                }
+            }
+        }
+        document.querySelector(".ul-fale-c").classList.toggle("active");
+    }
+) 
+    </script>
+</body>
+</html>
